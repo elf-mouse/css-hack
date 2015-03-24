@@ -1,0 +1,168 @@
+.css-hack {
+	border-collapse: collapse;
+	border: 1px solid #D6D6D6;
+	width: 100%;
+	line-height: 15px;
+}
+.css-hack th {
+	vertical-align: baseline;
+	padding: 8px;
+	line-height: 18px;
+	background-color: #EEE;
+	border: 1px solid #D6D6D6;
+	text-align: left;
+	font-weight: 700;
+}
+.css-hack td {
+	vertical-align: text-top;
+	padding: 8px;
+	line-height: 18px;
+	border: 1px solid #D6D6D6;
+}
+.css-hack .alignright {
+	text-align: right;
+	font-family: monospace;
+	color: #000;
+	font-size: 0.9em;
+}
+.css-hack .hack-extra {
+	color: #f30;
+}
+.css-hack .render {
+	background: #00A700;
+	color: #fff;
+}
+.css-hack .unrender {
+	background: #CC0F16;
+	color: #fff;
+}
+.css-hack .half-rander {
+	background: #EFBB1C;
+	color: #fff;
+}
+.css-hack .break-rander {
+	background: #9203a3;
+	color: #fff;
+}
+.css-hack {
+	font-size: 12px;
+}
+/* test selector hack style */
+* html #s1 {
+	background: #00A700;
+}
+*+html #s2 {
+	background: #00A700;
+}
+*:first-child+html #s3 {
+	background: #00A700;
+}
+html>body #s4 {
+	background: #00A700;
+}
+html>/**/body #s5 {
+	background: #00A700;
+}
+#s6:not(x) {
+	background: #00A700;
+}
+body:last-child #s7 {
+	background: #00A700;
+}
+body:nth-of-type(1) #s8 {
+	background: #00A700;
+}
+body:first-of-type #s9 {
+	background: #00A700;
+}
+html[lang] #s10 {
+	background: #00A700;
+}
+:root *> #s11 {
+	background: #00A700;
+}
+ #s12-1, x:-moz-any-link {
+background:#00A700;
+}
+ #s12-2, x:-webkit-any-link {
+background:#00A700;
+}
+ #s13-1, x:-moz-any-link, x:default {
+background:#00A700;
+}
+ #s13-2, x:-webkit-any-link, x:default {
+background:#00A700;
+}
+body:not(:-moz-handler-blocked) #s14 {
+	background: #00A700;
+}
+html:first-child #s15 {
+	background: #00A700;
+}
+ #s16, x:ie {
+background:#00A700;
+}
+/* test property hack style */
+#p1 {
+	background: #00A700\9;
+}
+#p2 {
+background:#00A700!ie;
+}
+#p3 {
+*background:#00A700;
+}
+#p4 {
+	_background: #00A700;
+}
+#p5 {
+	background /**/: #00A700;
+}
+#p6 {
+	background /*\**/: #00A700\9;
+}
+#p7 {
+	background: /*\**/#00A700\9;
+}
+#p8 {
+	background: #00A700\0/;
+}
+#p9 {
+	background: #00A700\0;
+}
+
+/* test media query hack style */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+#m1 {
+	background: #00A700;
+}
+}
+ @-moz-document url-prefix() {
+#m2 {
+background:#00A700;
+}
+}
+
+@media screen\9 {
+#m3 {
+	background: #00A700;
+}
+}
+
+@media \0screen\,screen\9 {
+#m4 {
+	background: #00A700;
+}
+}
+
+@media \0screen {
+#m5 {
+	background: #00A700;
+}
+}
+
+@media screen\0 {
+#m6 {
+	background: #00A700;
+}
+}
